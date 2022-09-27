@@ -1,15 +1,25 @@
 package com.devsuperior.crudclientes.dto;
 
 import com.devsuperior.crudclientes.entities.Client;
-import org.apache.catalina.mapper.Mapper;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
 public class ClientDTO {
     private Long id;
+
+    @Size(min = 3, max = 80, message = "Preencher com um nome válido | 03 a 80 caracteres")
+    @NotBlank(message = "Campo requerido")
     private String name;
     private String cpf;
+
+    @Positive(message = "Valor deve ser maior que 0")
     private Double income;
+
+    @PastOrPresent(message = "Não pode ser data futura | Inserir data de nascimento válida")
     private LocalDate birthDate;
     private Integer children;
 
