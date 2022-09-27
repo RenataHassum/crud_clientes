@@ -1,6 +1,7 @@
 package com.devsuperior.crudclientes.dto;
 
 import com.devsuperior.crudclientes.entities.Client;
+import org.apache.catalina.mapper.Mapper;
 
 import java.time.LocalDate;
 
