@@ -54,5 +54,10 @@ public class ClientService {
         entity.setChildren(dto.getChildren());
     }
 
+    @Transactional
+    public void delete(Long id) {
+        repository.deleteById(id);
+    }
+
 
 }
