@@ -1,4 +1,4 @@
-package com.devsuperior.crudclientes.dto;
+package com.devsuperior.crudclientes.dto.exceptions;
 
 import java.time.Instant;
 
